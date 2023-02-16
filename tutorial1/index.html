@@ -11,11 +11,76 @@
 </head>
 <body>
     <div>
-        <h1>Simple Note dapp</h1>
+        <!--
+           <h1>Simple Note dapp</h1>
         <p>Write a note:</p>
         <input type="text" id="inputNote"/>
         <button onclick="setNote()">Set Note</button>
-        <button onclick="getNote()">Get Note</button>
+        <button onclick="getNote()">Get Note</button> 
+        -->
+        
+        <h1>Airdrop dapp</h1>
+        <p>Add addresses:</p>
+        <input type="text" id ="addresses" />
+        <button onclick="airdropTokensWithTransfer()"> Transfer tokens</button>
+        <button onclick="getBalance()">Get Balance</button>
+        <p>Balance: <span id = "balance"></p>
+
     </div>
 </body>
 </html>
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+<script src="script.js"></script>
+</head>
+<body>
+  <div id="text">
+  <input name="name" style="color:#00000;" class="name required" type="button" onclick="addInput()" value="Add new address" /> 
+  <button onclick="airdropTokensWithTransfer()"> Transfer tokens</button>
+  <button onclick="getBalance()">Get Balance</button>
+  <p>Balance: <span id = "balance"></p>
+
+</div>
+</body>
+</html>
+
+
+
+fields = 0;
+pNR = 0;
+err = 0;
+
+function addInput() {
+    var firstInput, errorText;
+    var text = document.getElementById("text");
+  
+    if (fields != 11) {
+        firstInput  = document.createElement("input");
+       
+        firstInput.type  = "text";
+        firstInput.name  = "first" + pNR;
+    
+        
+        text.appendChild(firstInput);
+        text.appendChild(document.createElement("br"));
+      
+        fields += 1;
+        pNR += 1;
+    } else {
+        if (err == 0) {
+            text.appendChild(document.createElement("br"))
+            text.appendChild(document.createTextNode("Maxim 10 addresses can be added!."));
+          
+            err = 1;
+        }
+      
+        document.form.add.disabled = true;
+    }
+}
+
+-->
